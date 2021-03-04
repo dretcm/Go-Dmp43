@@ -17,7 +17,7 @@ class Interface:
         self.dig.lineEdit_1.setPlaceholderText("url o link de youtube")
         self.dig.lineEdit_1.setStyleSheet('font: 75 11pt "Arial";')
 
-        items = ['mp4-720p', 'mp4-480p', 'mp4-360p','mp3']
+        items = ['mp4-1080p','mp4-720p', 'mp4-480p', 'mp4-360p','mp3']
         for i in items:
             self.dig.comboBox.addItem(i)
         self.dig.comboBox.setStyleSheet('font: 75 11pt "Arial";')
