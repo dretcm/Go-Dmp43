@@ -43,7 +43,7 @@ class Download_YT(QThread):
         audiofile = self.path + '/audio.mp4'
         outputfile = self.outpath + '/output.mp4'
         
-        subprocess.run(f"ffmpeg -i {videofile} -i {audiofile} -c copy -y {outputfile}")
+        subprocess.run(f"ffmpeg -i \"{videofile}\" -i \"{audiofile}\" -c copy -y \"{outputfile}\"")
 
         file  = self.outpath + '/' + stream2.default_filename
         os.rename(outputfile, file)
@@ -71,7 +71,7 @@ class Download_YT(QThread):
         outputfile = os.path.join(self.outpath,'output.mp3')
         videofile = os.path.join(self.path, 'music_download.mp4')
         
-        subprocess.run(f"ffmpeg -i {videofile} -y {outputfile}")
+        subprocess.run(f"ffmpeg -i \"{videofile}\" -y \"{outputfile}\"")
         file = self.outpath + '/' + stream.default_filename[:-4] + '.mp3'
         os.rename(outputfile, file)
         os.remove(videofile)
